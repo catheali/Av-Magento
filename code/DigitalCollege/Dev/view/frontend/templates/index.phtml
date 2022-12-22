@@ -1,0 +1,27 @@
+<h1>Tabela de Usuarios</h1>
+<hr>
+<table>
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Descrição</th>
+    <th>Criado Em:</th>
+    </tr>
+    </thead>
+    <tbody>
+<?php
+foreach ($block->getDados() ?? [] as $item){
+    echo "
+    <tr>
+    <td>{$item['id']}</td>
+    <td>{$item['author_name']}</td>
+    <td>{$item['email']}</td>
+    <td>{$item['description']}</td>
+    <td>{$item['created_at']}</td>
+    </tr>" ;
+}
+?>
+    </tbody>
+</table>

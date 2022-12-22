@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="DigitalCollege\Dev\Controller\Index\Index">
+        <plugin name="Digital_Controller" type="DigitalCollege\Dev\Plugin\DevPlugin" disabled="false" />
+    </type>
+
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="change_product" type="DigitalCollege\Dev\Plugin\PromoPlugin " sortOrder="1" disabled="true"/>
+    </type>
+
+    <preference for="DigitalCollege\Dev\Api\PostManagementInterface" type="DigitalCollege\Dev\Model\PostManagement" />
+
+    <preference for="DigitalCollege\Dev\Api\Data\CategoryLinkManagementInterface" type="DigitalCollege\Dev\Model\CategoryLinkManagement" />
+
+    <preference for="DigitalCollege\Dev\Api\Data\CategoryProductLinkInterface" type="DigitalCollege\Dev\Model\CategoryProductLink" />
+
+    <preference for="DigitalCollege\Dev\Api\Data\ProductLinkManagementInterface" type="DigitalCollege\Dev\Model\CategoryLinkManagement" />
+
+</config>
